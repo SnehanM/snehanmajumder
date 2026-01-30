@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundational Foods</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NYT-style Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="masthead">
+                <h1 class="site-title">Foundational Foods</h1>
+                <div class="header-rule"></div>
+                <p class="site-subtitle">A personal catalog of notable dishes</p>
+            </div>
+            <nav class="nav-tabs">
+                <button class="nav-tab active" data-tab="about">About</button>
+                <button class="nav-tab" data-tab="map">Map</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Tab -->
+        <div class="tab-content active" id="about-tab">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2 class="about-title">About This Collection</h2>
+                    <div class="about-rule"></div>
+                    <div class="about-text" contenteditable="true" id="about-description">
+                        <p>Click here to add your description...</p>
+                        <p>This is a personal catalog of memorable dining experiences. Each entry represents a dish that left an impression—whether through exceptional execution, unexpected flavor, or simply being the right thing at the right time.</p>
+                        <p>The collection spans cities and cuisines, from neighborhood staples to special occasions. It's not comprehensive, just honest.</p>
+                    </div>
+                    <button class="save-btn" id="save-description">Save Description</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Tab -->
+        <div class="tab-content" id="map-tab">
+            <!-- Map Section -->
+            <section class="map-section">
+                <div id="map" class="map-container"></div>
+                <div class="map-controls">
+                    <button class="control-btn" id="fit-bounds-btn">Show All</button>
+                    <button class="control-btn" id="cluster-toggle">Cluster</button>
+                </div>
+            </section>
+
+            <!-- Info Panel -->
+            <aside id="info-panel" class="info-panel">
+                <button class="close-panel" id="close-panel">&times;</button>
+                <div id="info-content"></div>
+            </aside>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number" id="total-miles">0</span>
+                    <span class="stat-label">Total Miles Traveled</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-rule"></div>
+        <p>Foundational Foods © 2024</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <script src="script.js"></script>
+</body>
+</html>
