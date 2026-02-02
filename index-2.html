@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snehan Majumder</title>
+
+  <!-- Google Fonts: Playfair Display (serif, NYT-feel) + Inter (clean sans for small text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.7;
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    /* ─── Layout Container ─── */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── Navigation ─── */
+    nav {
+      padding: 48px 0 0 0;
+      margin-bottom: 56px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #1a1a1a;
+      border-bottom: 1.5px solid transparent;
+      padding-bottom: 3px;
+      transition: border-color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-color: #1a1a1a;
+    }
+
+    /* ─── Header / Name ─── */
+    .hero {
+      margin-bottom: 52px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: #111111;
+    }
+
+    /* ─── Profile Photo ─── */
+    .photo-block {
+      margin-bottom: 48px;
+    }
+
+    .photo-block img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      /* filter: grayscale(10%); */
+    }
+
+    /* placeholder box shown when no photo is set */
+    .photo-placeholder {
+      width: 160px;
+      height: 160px;
+      background: #ececec;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    /* ─── Section Divider ─── */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #d0d0d0;
+      margin: 48px 0;
+    }
+
+    /* ─── Section Headings ─── */
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 18px;
+    }
+
+    /* ─── Body Text ─── */
+    .section-text {
+      color: #3a3a3a;
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    /* ─── Hyperlinks ─── */
+    a.link {
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid #b0b0b0;
+      transition: border-color 0.2s ease;
+    }
+
+    a.link:hover {
+      border-color: #1a1a1a;
+    }
+
+    /* ─── Contact / Footer ─── */
+    .contact {
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid #e8e8e8;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .contact a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #888;
+      transition: color 0.2s ease;
+    }
+
+    .contact a:hover {
+      color: #1a1a1a;
+    }
+
+    /* ─── Bottom Padding ─── */
+    footer {
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ── Nav ── -->
+  <nav>
+    <ul>
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#interests">Interests</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Name ── -->
+  <header class="hero">
+    <h1>Snehan Majumder</h1>
+  </header>
+
+  <!-- ── Photo ── -->
+  <!-- To add your photo: replace the placeholder div below with:
+       <img src="photo.jpg" alt="Snehan Majumder" />
+       and put your photo file (photo.jpg) in the same folder as index.html -->
+  <div class="photo-block">
+    <div class="photo-placeholder">Your photo</div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- ABOUT                                   -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="about">
+    <h2 class="section-heading">About</h2>
+    <p class="section-text">
+      Write a short intro here — who you are, where you study or work, and what drives you.
+      You can add a <a href="https://example.com" class="link">link</a> to anything you like
+      by copying the pattern of that tag.
+    </p>
+    <p class="section-text">
+      A second paragraph is a nice place to add something a little more personal or to
+      elaborate on your background.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- RESEARCH                                -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="research">
+    <h2 class="section-heading">Research</h2>
+    <p class="section-text">
+      Describe your research interests or current projects here. Link to a lab, a paper,
+      or a project page like this: <a href="https://example.com" class="link">example project</a>.
+    </p>
+    <p class="section-text">
+      You can add more paragraphs — or even a simple list of projects — just by copying
+      the &lt;p class="section-text"&gt; block pattern below each other.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- INTERESTS                               -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="interests">
+    <h2 class="section-heading">Interests</h2>
+    <p class="section-text">
+      What do you enjoy outside of work or school? This is a good place to show personality.
+      Feel free to <a href="https://example.com" class="link">link out</a> to anything relevant.
+    </p>
+  </section>
+
+  <!-- ── Contact Links ── -->
+  <!-- Add or remove links here as you like -->
+  <div class="contact">
+    <a href="mailto:your-email@example.com">Email</a>
+    <a href="https://github.com" target="_blank">GitHub</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  </div>
+
+</div><!-- end .container -->
+
+<footer></footer>
+
+</body>
+</html>
